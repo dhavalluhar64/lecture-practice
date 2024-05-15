@@ -1,0 +1,25 @@
+04_from_validtion.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <!-- html pattern -->
+        <!-- <input type="text" pattern="[a-zA-z]+" placeholder="Enter your name" required> -->
+        <input type="text" pattern="[a-zA-z]{3,6}" placeholder="Enter your name" required>
+        <!-- <input type="text" pattern="[0-9]+" placeholder="Enter your number" required> -->
+        <input type="text" pattern="[0-9]{10}" maxlength="10" placeholder="Enter your number" required>
+        
+        <!-- shubhamjadav.tops@gmail.com
+        [a-zA-Z0-9]+'@'+[a-zA-Z]+'.'+[a-z]{2,3} -->
+
+        <input type="number" min="1" max="6" placeholder="Qutity" required>
+
+        <input type="submit">
+    </form>
+</body>
+</html>
