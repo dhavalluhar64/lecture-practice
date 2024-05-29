@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 200px;
+            width: 200px;
+            border:  2px solid;
+            margin: 200px auto;
+            overflow: hidden;
+        }
+        .first{
+            height: 200px;
+            width: 200px;
+            /* border:  2px solid; */
+            background: rgba(0,0,0,0.2);
+            transform: translate(100%,-100%);
+            transition: 1s;
+        }
+        .main:hover .first{
+            transform: translate(0%,0%);
+        }
+        .secoud{
+            height: 200px;
+            width: 200px;
+            /* border:  2px solid; */
+            background: rgba(0,0,0,0.2);
+            transform: translate(-100%,0%);
+            transition: 1s;
+        }
+        .main:hover .secoud{
+            transform: translate(0%,-100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="first"></div>
+        <div class="secoud"></div>
+    </div>
+</body>
+</html>
