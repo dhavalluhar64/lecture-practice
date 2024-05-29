@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li::first-letter{
+            background-color: rebeccapurple;
+        }
+        ul li::first-line{
+            background-color: red;
+        }
+        .main::first-line{
+            background-color: rebeccapurple;
+        }
+        .main::selection{
+            background-color: lightcoral;
+            color: aqua;
+        }
+        ul li::before{
+            content: "s";
+        }
+        ul li::after{
+            content: "j";
+        }
+        ul li::marker{
+            /* background-color: red; */
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- :: pesudeo_elemets -->
+
+    <ul>
+        <li>One</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+        <li>Seven</li>
+        <li>Eight</li>
+    </ul>
+
+    <div class="main">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae mollitia natus architecto iste quo! Ratione debitis odit laudantium laborum cumque deleniti obcaecati inventore. Earum illo quae temporibus optio asperiores? Labore!Lorem
+    </div>
+</body>
+</html>
