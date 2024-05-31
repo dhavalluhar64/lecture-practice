@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        section{
+            height: 800px;
+            /* width: ; */
+            background-color: orange;
+            display: flex;
+            border: 2px solid black;
+        }
+        .div{
+            height: 100px;
+            width: 100px;
+            border: 2px solid;
+        }
+        /* defult */
+        /* #one{
+
+            position: static;
+            top: 100px;
+            bottom: 50px;
+        } */
+        /* body */
+        /* #two{
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+        } */
+        /* #three{
+            position: sticky;
+            top: 0;
+            left: 0;
+        } */
+        /* prenet  */
+        /* #four{
+            position: relative;
+            top: 50px;
+            left: 50px;
+        } */
+        #five{
+            position: relative;
+        }
+        .ab{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 30px;
+            width: 30px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <!-- position  -->
+    <!-- 1) static :-  defult :- top,bottom,left,right :- px,% 
+    2) fixed :- body :- top,bottom,left,right :- px,%  
+    3) sticky :- particlre section,div :- top,bottom,left,right :- px,% 
+    4) relative :- perent div :- top,bottom,left,right :- px,% 
+    5) abousle :- child div :-top,bottom,left,right :- px,%  -->
+
+    <section>
+        <div class="div" id="one">1</div>
+        <div class="div" id="two">2</div>
+        <div class="div" id="three">3</div>
+        <div class="div" id="four">4</div>
+        <div class="div" id="five">
+            <div class="ab">
+                5
+            </div>
+        </div>
+        <div class="div">6</div>
+        <div class="div">7</div>
+    </section>
+    <section>
+
+    </section>
+ </body>
+</html>
