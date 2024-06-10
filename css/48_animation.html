@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            height: 100px;
+            width: 100px;
+            border: 2px solid;
+            /* animation: anim1 2s infinite; */
+            animation: identifier 4s infinite;
+            
+        }
+        /* @keyframes anim1 {
+            from{background-color: red;
+                border-radius: 50%;}
+            to{background-color: aqua;
+                border-radius: 100%;}
+        } */
+         @keyframes identifier {
+            0%{background-color: lightcoral;
+                    
+            }
+            20%{background-color: yellow;}
+            40%{background-color: turquoise;
+                border-radius: 50%;    
+            }
+            60%{background-color: tomato;
+                transform: translate(100px);}
+            80%{background-color: blueviolet;
+                transform: scale(1.4);}
+            100%{background-color: black;
+                transform: scale(1);
+                }
+         }
+    </style>
+</head>
+<body>
+    <div class="div">
+
+    </div>
+</body>
+</html>
