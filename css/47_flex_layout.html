@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display: flex;
+            list-style: none;
+            background-color: lightgreen;
+            padding: 10px;
+            justify-content: space-between;
+        }
+        .main{
+            display: flex;
+        
+        }
+        .col-1,.col-2,.col-3,.col-4{
+            height: 300px;
+            width: 25%;
+            border: 2px solid gray;
+        }
+        .col-2{
+            display: flex;
+            flex-direction: column;
+        }
+        .top,.bottom{
+            height: 50%;
+            width: 100%;
+            border: 2px solid gold
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li>Logo</li>
+            <li>nav-list</li>
+            <li>icons</li>
+        </ul>
+    </header>
+
+    <section>
+        <div class="main">
+            <div class="col-1">1</div>
+            <div class="col-2">
+                <div class="top">top</div>
+                <div class="bottom">bottom</div>
+            </div>
+            <div class="col-3">2</div>
+            <div class="col-4">2</div>
+    </section>
+</body>
+</html>
