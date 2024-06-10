@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ul #li{
+            background-color: lightcoral;
+            padding: 10px;
+            margin: 0 5px;
+            display:inline-block;
+            position: relative;
+        }
+        #first{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            content: "";
+            background-color: red;
+            list-style: none;
+            margin: 0;
+            padding: 5px;
+            display: none;
+        }
+        #li:hover #first{
+            display: block;
+        }
+        #first:hover{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ul">
+        <li id="li">home
+            <ul id="first">
+                <li>Home 1</li>
+                <li>Home 2</li>
+                <li>Home 3</li>
+                <li>Home 4</li>
+            </ul>
+        </li>
+        <li id="li">about
+            <ul id="first">
+                <li>about 1</li>
+                <li>about 2</li>
+                <li>about 3</li>
+                <li>about 4</li>
+                <li>about 5</li>
+            </ul>
+        </li>
+        <li id="li">Contact
+            <ul id="first">
+                <li>contact 1</li>
+                <li>contact 2</li>
+                <li>contact 3</li>
+                <li>contact 4</li>
+                <li>contact 5</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
