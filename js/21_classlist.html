@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h1{
+            height: 200px;
+            width: 50%;
+            margin: 0 auto;
+            background:linear-gradient(red,blue);
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">hello classlist add and remove</h1>
+
+    <button onclick="add()">add</button>
+    <button onclick="remove()">remove</button>
+    <button onclick="togg()">toggle</button>
+
+    <script>
+        var h1_tag = document.getElementById("h1")
+
+        function add()
+        {
+            h1_tag.classList.add("h1");
+        }
+
+        function remove()
+        {
+            h1_tag.classList.remove("h1")
+        }
+        function togg()
+        {
+            h1_tag.classList.toggle("h1")
+        }
+    </script>
+</body>
+<!-- </html> -->
