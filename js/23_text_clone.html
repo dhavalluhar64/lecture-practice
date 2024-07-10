@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" placeholder="enter text" onkeypress="chnage()" id="n1"> -->
+    <input type="text" placeholder="enter text" onkeyup="chnage()" id="n1">
+    <textarea name="" id="n2"></textarea>
+    <button onclick="chnage()" id="btn">click</button>
+
+    <script>
+        var num1 = document.getElementById("n1");
+        var textar = document.getElementById("n2");
+
+        // var btn = document.getElementById("btn")
+        // btn.style.background ="red"
+
+        function chnage()
+        {
+            textar.innerHTML = num1.value;
+        }
+    </script>
+</body>
+<!-- </html> -->
