@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="return validate()">
+        <div>
+            <input type="text" placeholder="Enter your name" id="nm">
+            <span id="nmer"></span>
+        </div>
+        <div>
+            <input type="email" placeholder="Enter your email" id="em">
+            <span id="emer"></span>
+        </div>
+        <div>
+            <input type="password" placeholder="Enter your password" id="psd">
+            <span id="psder"></span>
+        </div>
+        <div>
+            <input type="password" placeholder="Enter your cpassword" id="cpsd">
+            <!-- <span></span> -->
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+
+    <script>
+        name_tag = document.getElementById("nm");
+        nmerr = document.getElementById("nmer");
+        // console.log(nmerr)
+
+        email_tag = document.getElementById("em");
+        emerr = document.getElementById("emer");
+
+        pass_tag = document.getElementById("psd");
+        psderr = document.getElementById("psder");
+
+        cpsd = document.getElementById("cpsd")
+
+        function validate()
+        {
+            if(name_tag.value == "" || name_tag.value == null){
+                nmerr.innerHTML="pls Field name....";
+                nmerr.style.color ="red";
+                return false;
+            }
+            else
+            {
+                nmerr.innerHTML="";
+            }
+            if(email_tag.value == "" || email_tag.value == null){
+                emerr.innerHTML="pls Field Email....";
+                emerr.style.color ="red";
+                return false;
+            }
+            else
+            {
+                emerr.innerHTML="";
+            }
+            if(pass_tag.value == "" || pass_tag.value == null){
+                psderr.innerHTML="pls Field name....";
+                psderr.style.color ="red";
+                return false;
+            }
+            else
+            {
+                psderr.innerHTML="";
+            }
+
+            if(pass_tag.value != cpsd.value)
+            {
+                alert("pls not match...")
+            }
+
+        }
+        
+    </script>
+</body>
+<!-- </html> -->
