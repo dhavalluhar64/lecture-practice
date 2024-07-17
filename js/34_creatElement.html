@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="x" id="d1">
+        <p id="para1">Para 1</p>
+        <p id="para2">Para 2</p>
+       
+        <p id="para3">Para 3</p>
+        <p id="para4">Para 4</p>
+    </div>
+
+    <script>
+
+
+        div_tag = document.getElementById('d1');
+        p_tag = document.getElementById('para3');
+
+        // crete = ("h2")
+
+        // h2_tag = document.createElement('h2');//<h2></h2>
+        // h1_tag = document.createElement('h1')
+        h2_tag = document.createElement('h2')
+
+        h2_text = document.createTextNode("hello h2 tag")
+
+        // h2_txt = document.createTextNode("This is Heading 2 throught JS"); // This is Heading 2 throught JS
+        // h1_text = document.createTextNode("hello h1 tah created") 
+
+        // join
+        // h2_tag.append(h2_txt);//<h2>This is Heading 2 throught JS</h2>
+
+        // h1_tag.append(h1_text)
+        h2_tag.append(h2_text)
+        div_tag.insertBefore(h2_tag,p_tag)
+     
+        // div_tag.insertBefore(h1_tag,p_tag)
+    </script>
+</body>
+</html>
+
+<!--  -->
