@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .main{
+            background-color: lightcoral;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="start">start</button>
+    <button class="stop">stop</button>
+    <div class="main">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas optio pariatur exercitationem fuga
+        consequuntur sunt, inventore tempore qui repudiandae, vel rem eveniet corporis, at nulla repellat libero
+        repellendus in culpa!
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".start").click(function(){
+                $(".main").slideToggle(1000)
+            })
+            $(".stop").click(function(){
+                $(".main").stop()
+            })
+        })
+    </script>
+</body>
+
+</html>
+<!--  -->
