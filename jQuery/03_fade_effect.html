@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .main{
+            background-color: lightcoral;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci ullam, eveniet, fuga vel consectetur at a eum
+        autem iste nisi ducimus voluptatibus, dolores similique nemo accusamus rerum doloribus totam aliquam?Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Est eligendi quam excepturi suscipit cum at debitis sapiente.
+        Repudiandae deleniti tempora repellat maiores commodi numquam, sint aut aliquid dignissimos exercitationem
+        voluptatum?
+    </div>
+
+    <button class="btn">fadeout</button>
+    <button class="btn1">fadeIn</button>
+    <button class="btn2">fadeToogle</button>
+    <button class="btn3">Fadeto</button>
+
+    <script>
+        $(document).ready(function(){
+            $(".btn").click(function(){
+                $('.main').fadeOut('fast')
+            })
+            $(".btn1").click(function(){
+                $('.main').fadeIn(1000)
+            })
+            $(".btn2").click(function(){
+                $('.main').fadeToggle(1000)
+            })
+            $(".btn3").click(function(){
+                $('.main').fadeTo(1000,0.5)
+            })
+        })
+    </script>
+</body>
+
+</html>
+<!--  -->
