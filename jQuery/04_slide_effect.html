@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .main{
+            background-color: lightgreen;
+            padding: 30px;
+            border: 2px solid;
+            /* display: none; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum minus quas saepe natus totam cum commodi
+        placeat mollitia autem voluptate, animi repudiandae eos. Iusto, quo quidem saepe illum quis molestiae!Lorem
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquam architecto sunt odio alias quisquam
+        nesciunt consectetur illum, dicta consequatur tenetur pariatur autem. Magnam exercitationem iure natus,
+        temporibus quaerat quod.
+    </div>
+    <button class="btn">silde up</button>
+    <button class="btn2">slide down</button>
+    <button class="btn3">slide toggle</button>
+
+    <script>
+        $(document).ready(function(){
+            $(".btn").click(function(){
+                $(".main").slideUp(1000)
+            })
+            $(".btn2").click(function(){
+                $(".main").slideDown(1000)
+            })
+            $(".btn3").click(function(){
+                $(".main").slideToggle(1000)
+            })
+        })
+    </script>
+
+
+</body>
+
+</html>
+<!--  -->
