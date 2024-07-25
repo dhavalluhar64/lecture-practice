@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        h1{
+            background-color: limegreen;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>hello this is callback function</h1>
+    <button class="btn">chnage</button>
+
+    <script>
+        // effetc not show callback call 
+        // $(document).ready(function(){
+        //     $(".btn").click(function(){
+        //         $("h1").slideUp(1000)
+
+        //         alert("hello this without callback")
+        //     })
+        // })
+
+
+        // with call back effect show affter callback
+        $(document).ready(function(){
+            $(".btn").click(function(){
+                $("h1").slideUp(1000,function(){
+                    alert("hello this with callback")
+                })         
+            })
+        })
+    </script>
+</body>
+</html>
