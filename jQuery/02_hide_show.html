@@ -1,0 +1,37 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: red;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>hello this is start with jQuery</h1>
+    <button class="btn">hide</button>
+    <button class="btn1">show</button>
+    <button id="btn">toggle</button>
+
+    <script>
+        $(document).ready(function(){
+            $('.btn').click(function(){
+                // console.log("btn click")
+                $('h1').hide(1000)
+            })
+            $('.btn1').click(function(){
+                $('h1').show(1000)
+            })
+            $('#btn').click(function(){
+                $('h1').toggle(1000)
+            })
+        })
+
+    </script>
+</body>
+</html>
+<!--  -->
