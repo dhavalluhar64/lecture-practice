@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>this is p tag</p>
+
+
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+      </ol>
+
+    <button class="b1">click</button>
+    <button class="b2">click me</button>
+    <button class="b3">click preoend</button>
+    <script>
+        $(".b1").click(function(){
+            $("p").append("<b>This is a boald</b>")
+        })
+        
+        $(".b2").click(function(){
+            $("ol").append("<li>This is a boald</li>")
+        })
+
+        $(".b3").click(function(){
+            $("ol").prepend("<li>This is a boald</li>")
+        })
+
+        
+
+    </script>
+</body>
+</html>
+<!--  -->
