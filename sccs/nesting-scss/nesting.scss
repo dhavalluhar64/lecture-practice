@@ -1,0 +1,42 @@
+$bg-color:lightgreen;
+$color:red;
+$font-size:30px;
+
+
+// nesting 
+
+.main{
+    list-style: none;
+    li{
+        display: inline-block;
+        background-color: $bg-color;
+        padding: 5px 10px;
+        &:hover{
+            background-color: rgb(12, 93, 216);
+            
+        }
+        a{
+            color: $color;
+            text-decoration: none;
+            &::after{
+                content: "s";
+            }
+        }
+    }
+    h1{
+        color: $bg-color;
+    }
+}
+
+.main1{
+    list-style: none;
+    li{
+        background-color: $color;
+        margin: 10px 0;
+        a{
+            text-decoration: none;
+            color: $bg-color;
+            font-size: $font-size;
+        }
+    }
+}

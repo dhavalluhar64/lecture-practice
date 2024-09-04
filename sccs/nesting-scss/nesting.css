@@ -1,0 +1,34 @@
+.main {
+  list-style: none;
+}
+.main li {
+  display: inline-block;
+  background-color: lightgreen;
+  padding: 5px 10px;
+}
+.main li:hover {
+  background-color: rgb(12, 93, 216);
+}
+.main li a {
+  color: red;
+  text-decoration: none;
+}
+.main li a::after {
+  content: "s";
+}
+.main h1 {
+  color: lightgreen;
+}
+
+.main1 {
+  list-style: none;
+}
+.main1 li {
+  background-color: red;
+  margin: 10px 0;
+}
+.main1 li a {
+  text-decoration: none;
+  color: lightgreen;
+  font-size: 30px;
+}/*# sourceMappingURL=nesting.css.map */
