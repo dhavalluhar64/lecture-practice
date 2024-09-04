@@ -1,0 +1,33 @@
+@use "haed";
+@use "paragraph";
+
+h1{
+    &:hover{
+        color: haed.$colorAnimations;
+    }
+
+    background-color: haed.$bg-color;
+    text-align: haed.$text-align;
+    font-size: haed.$font-size;
+    text-transform: haed.$text-transfrom;
+    color: haed.$color;
+    
+
+}
+
+p{
+
+    &:hover{
+  
+        padding: paragraph.$gap;
+        transition: paragraph.$transition;
+
+    }
+
+    background-color: paragraph.$bg-color1;
+    color: paragraph.$color1;
+    text-align: paragraph.$text-align;
+    font-size: paragraph.$font-size1;
+    text-transform: paragraph.$text-transfrom;
+
+}
