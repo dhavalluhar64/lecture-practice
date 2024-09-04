@@ -1,0 +1,110 @@
+@mixin haeder(){
+
+    text-align: center;
+    margin-top: 20px;
+    color: coral;
+    font-size: 35px;
+}
+
+@mixin navbar(){
+
+    width: 100%;
+    background-color: blue;
+
+}
+
+@mixin unorder(){
+
+    display: flex;
+    justify-content: center;
+    padding: 10px 40px;
+
+}
+
+@mixin list(){
+
+    list-style: none;
+    padding: 0 50px;
+
+}
+
+@mixin Ancer(){
+
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+@mixin border(){
+    border: 10px solid red;
+}
+
+@mixin border2($size,$color){
+    border: $size solid $color;
+}
+
+@mixin flex($value){
+    display: flex;
+    justify-content: $value;
+}
+
+
+h1{
+
+    @include haeder();
+}
+
+nav{
+    ul{
+        li{
+
+            a{
+                &:hover{
+
+                    color: red;
+                }
+
+                @include Ancer();
+                  
+                 
+            }
+
+            @include list()
+            
+        }
+
+        @include unorder();
+        
+    }
+
+    @include navbar();
+   
+}
+
+
+
+.main{
+    height: 100px;
+    width: 100px;
+    @include border();
+}
+
+.main2{
+    height: 200px;
+    width: 200px;
+    @include border2(5px,blue);
+}
+
+.main3{
+    @include flex(space-between);
+    @media only screen and (max-width:992px) {
+        @include flex(center)
+    }
+    .box{
+        height: 200px;
+        width: 200px;
+        @include border2(2px,red)
+    }
+}
