@@ -1,0 +1,18 @@
+#color () {
+
+    bg-color: yellow;
+    text-color: green;
+    animationscolor: red;
+    cursor-point: pointer;
+}
+
+h1 {
+    &:hover {
+        color: #color[animationscolor];
+
+    }
+
+    background-color: #color[bg-color];
+    color: #color[text-color];
+    cursor: #color[cursor-point];
+}
