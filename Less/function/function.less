@@ -1,0 +1,22 @@
+@bg-color: red;
+
+h1 {
+    margin: if((2<1), 10px, 20px);
+    background-color: if((iscolor(@bg-color)), @bg-color, blue);
+}
+
+ul {
+    display: flex;
+    list-style: none;
+
+    li {
+
+        background-color: hsl(90, 50%, 50%);
+        margin: 0px 5px;
+        padding: 5px 10px;
+
+        &:hover {
+            background-color: saturate(hsl(90, 50%, 50%), 30%);
+        }
+    }
+}
