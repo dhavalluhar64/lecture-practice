@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <script>
+
+        let person = {
+
+            Name: "Dhaval",
+            age: 21,
+            cousre: "Frontend-developers",
+            backend: {
+
+                backendCourse: "Node.js",
+                Database: "monoDB",
+            },
+        };
+
+        // console.log(person);
+
+        // console.log(person.backend);
+
+        // console.log(person.backend.Database);
+
+
+
+        //Destracuturing
+
+        // let {Name,age} = person;
+
+        // console.log(Name,age);
+
+
+
+        // for in loops inside index and value
+
+        //    let counter = 0
+
+        //    for (let i in person) {
+
+        //        console.log("index = ", counter, "key:", i, ":", person[i]);
+        //        counter++;
+
+
+        //    }
+
+
+        // objects inside read key and value 
+
+        let count = 0;
+
+        Object.entries(person).forEach(([key, value]) => {
+
+            console.log(count, "key =", key, "value =", value);
+
+            count = count + 1;
+
+        });
+
+
+
+        // only for objects inside read value and key value not read
+
+        let count1 = 0
+        Object.values(person).forEach( value => {
+
+            console.log(count1,"value =", value);
+            count1++;
+
+        });
+
+
+    </script>
+</body>
+
+</html>
+
+<!--  -->
