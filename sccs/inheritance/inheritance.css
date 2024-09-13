@@ -1,0 +1,15 @@
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: brown;
+  font-weight: 900;
+}
+
+.main {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  left: 44%;
+  bottom: 50%;
+  background-color: red;
+}/*# sourceMappingURL=inheritance.css.map */
