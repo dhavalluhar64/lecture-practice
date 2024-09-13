@@ -1,0 +1,29 @@
+$font-size: 50px;
+$font-size1: 100px;
+$color: red;
+$text-align: center;
+$color1: blue;
+$font-weight: 400;
+
+h1{
+
+    font-size: $font-size + 10;
+    color: $color;
+    text-align: $text-align;
+    text-transform: capitalize;
+}
+
+p{
+    font-size: $font-size;
+    color: $color1;
+    font-weight: $font-weight + 500;
+    text-align: $text-align;
+    text-transform: capitalize;
+
+}
+
+.main{
+    width: $font-size1 * 3;
+    height: $font-size + 100px;
+    border: 2px solid;
+}
