@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <script>
+
+
+        let sum = [1, 2, 3, 4, 5];
+        let sum2 = [6, 7, 8, 9];
+        let sum3 = sum.concat(sum2) // The concat() method returns a new array by merging two or more values/arrays.
+        console.log(sum3);
+
+
+        let cosnt = ["javaScript", "React.js", "vue.js"];
+        let result = cosnt.constructor;
+        console.log(result); // The constructor property returns the constructor function for the array. 
+
+        let fruite = ["Apple", "Banana", "Grape"];
+        let frt = fruite.fill("Cherry"); // The fill() method returns an array by filling all elements with a specified value.
+        console.log(frt);
+
+
+        //////////////////////////////////////////
+
+        let number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        function checkValue(number) {
+
+            if (number % 2 === 0) {
+
+                return true;
+
+            } else {
+
+                return false;
+            }
+        }
+
+        let evenNumber = number.filter(checkValue); // The filter() method returns a new array with all elements that pass the test defined by the given function.
+
+        console.log(evenNumber);
+
+
+        ////////////////////////////////////////////////////
+
+        let numbers = [1, 3, 4, 9, 8];
+
+        function isEven(element) {
+
+            return element % 2 == 0;
+        }
+
+        let numberEven = numbers.find(isEven); // The find() method returns the value of the first array element that satisfies the provided test function.
+
+        console.log(numberEven);
+
+        ////////////////////////////////////////////////////////
+
+        function isOdd(element) {
+
+            return element % 2 !== 0;
+        }
+
+        let num1 = [2, 8, 1, 3, 4];
+
+        let firtsOdd = num1.findIndex(isOdd); // The findIndex() method returns the index of the first array element that satisfies the provided test function or else returns -1.
+
+        console.log(firtsOdd);
+
+
+        ////////////////////////////////////////////////////
+
+        let num2 = [1, 2, [3, 4, [5, 6, [7, 8]]]];
+
+        let flatArray = num2.flat(2) // The flat() method creates a new array by flattening a nested array up to the specified depth.
+
+        console.log(flatArray);
+
+
+        //////////////////////////////////////////////////////
+
+        let num3 = [1, 2, 3, 4, 5];
+
+        let result1 = num3.flatMap((x) => { // The flatMap() method first maps each element of an array using a mapping function, then flattens it into a new array.
+
+            return x ** 2;
+        })
+
+        console.log(result1);
+
+        //////////////////////////////////////////////////////
+
+        let languages = ["javaScript", "java", "c++"];
+
+        let check = languages.includes("c++"); // The includes() method checks if an array contains a specified element or not.
+
+        console.log(check) // true.
+
+
+
+        ////////////////////////////////////////////////////////
+
+
+        let lang = ["javaScript", "React-js", "CSS"];
+
+        let lan = lang.indexOf("CSS"); // The indexOf() method returns the first index of occurance of an array element, or -1 if it is not found.
+
+        console.log(lan);
+
+
+        ////////////////////////////////////////////////////////
+
+
+        let nu4 = [1, 2, 3, 4, 5];
+
+        let text = "java";
+
+        console.log(Array.isArray(text)); // false.
+
+        console.log(Array.isArray(nu4)); // true  The isArray() method checks whether the passed argument is an array or not.
+
+        /////////////////////////////////////////////////////////
+
+
+        let msg = ["i", "love", "JavaScript"];
+
+        let joinMehtod = msg.join(" "); // The join() method returns a new string by concatenating all of the elements in an array, separated by a specified separator.
+
+        console.log(joinMehtod);
+
+
+        ///////////////////////////////////////////////////////////     
+
+        let alphabate = ["A", "B", "C"];
+
+        let iterator = alphabate.keys(1); // The keys() method returns a new Array Iterator object that contains the keys for each element in the array.
+
+
+        for (let key of iterator) {
+
+            console.log(key);
+        }
+
+
+        ///////////////////////////////////////////////////////
+
+
+        let priceList = [10, 23, 35, 45, 58, 62, 79, 88, 90];
+
+        let List = priceList.lastIndexOf(90); // The lastIndexOf() method returns the index of the last occurrence of a specified element in the array.
+
+        console.log(List);
+
+
+        //////////////////////////////////////////////////////////////
+
+
+        let list1 = [2, 4, 6, 8, 10];
+
+        function square(num7) {
+
+            return num7 * num7;
+        };
+
+        let sqr = list1.map(square); // The map() method creates a new array with the results of calling a function for every array element.
+
+        console.log(sqr)
+
+
+
+        ////////////////////////////////////////////////////////////////////////////////
+
+
+        let alp = Array.of("A", "B", "C"); // The of() method creates a new array instance from the given arguments.
+
+        console.log(alp);
+
+
+        //////////////////////////////////////////////////////////////////////////
+
+
+        let cities = ["New York", "INDIA", "Madrid", "UK"];
+
+        let remove = cities.pop(); // The pop() method removes the last element from an array and returns that element.
+
+        console.log(cities);
+        console.log(remove);
+
+
+        /////////////////////////////////////////////////////////
+
+
+        let city = ["New York", "US", "Madrid"];
+
+        city.push("london"); // The push() method adds zero or more elements to the end of the array. 
+
+        console.log(city);
+
+
+        ///////////////////////////////////////////////////////////
+
+
+        const msg1 = ["JavaScript", "is", "love"];
+
+        function joinString(accumulater, currentValue) {
+
+            return accumulater + currentValue;
+
+        }
+
+        let joinVlaue = msg1.reduce(joinString); // The reduce() method executes a reducer function on each element of the array and returns a single output value.
+
+        console.log(joinVlaue);
+
+
+
+        ////////////////////////////////////////////////////////////////////////////
+
+
+        let num8 = [1, 2, 3, 4, 5];
+
+        let reversArray = num8.reverse(); // The reverse() method returns the array in reverse order.
+
+        console.log(reversArray);
+
+
+
+        //////////////////////////////////////////////////////////////
+
+        let lgn1 = ["English", "Java", "python", "JavaScrpit"];
+
+        let lgn2 = lgn1.shift(); // The shift() method removes the first element from an array and returns that element.
+
+        console.log(lgn2);
+
+
+        /////////////////////////////////////////////////////////////////
+
+        let lng3 = [2, 3, 4, 5, 6, 7, 8, 9];
+
+        let val = lng3.slice(3, 6); // The slice() method returns a shallow copy of a portion of an array into a new array object.
+
+        console.log(val);
+
+
+        /////////////////////////////////////////////////////////////////////////
+
+
+        let newVlaue = [3, 5, 8, 6, 4, 7, 9, 1];
+
+        let sequnceNumber = newVlaue.sort(); // The sort() method sorts the items of an array in a specific order (ascending or descending).
+
+        console.log(sequnceNumber);
+
+
+
+        ///////////////////////////////////////////////////////////////////////////////////
+
+
+        let spl = [1, 2, 3, 4, 5, 6, 8, 9];
+
+        let delt = spl.splice(2, 1); // The splice() method modifies an array (adds, removes or replaces elements).
+
+        console.log(delt);
+
+
+        ////////////////////////////////////////////////////////////////////////////
+
+
+        let items = ["javaScrpit", 1, "a", 3];
+
+        let itemsString = items.toString(); // The toString() method returns a string formed by the elements of the given array.
+
+        console.log(itemsString);
+
+
+        //////////////////////////////////////////////////////////////////////////
+
+        let items2 = ["javaScript", "Java", "React-Js"];
+
+        let items3 = items2.unshift("php"); // The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+
+        console.log(items3)
+        console.log(items2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+<!--  -->
