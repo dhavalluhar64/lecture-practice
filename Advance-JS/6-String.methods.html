@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String methods</title>
+</head>
+
+<body>
+    <script>
+
+        let str = "dhaval luhar";
+        console.log(str.length) // string length value count.
+
+        let str1 = "hello javaScript";
+        console.log(str1.charAt(6)) // return character At a specified index(position) in a string.
+
+
+        let str2 = "hello javaScript1";
+        console.log(str2.charCodeAt()) // return unicode of the character at a given position in a string.
+
+        let str3 = "hello JavaScript2";
+        console.log(str3.at(6)) // returns an indexed element from a string.
+
+
+        let str4 = "hello JavaScript3";
+        console.log(str4.slice(6,17)) // extracts a part of a string and returns the extracted part in a new string.
+
+        //   The method takes 2 parameters: start position, and end position (end not included).
+
+
+        let str5 = "hello JavaScript4";
+        console.log(str5.slice(-17,-12)) // return revers value read in -17,-12.
+
+
+        let str6 = "hello JavaScript5";
+        console.log(str6.substring(6, 17)) // The substring() method extract a part of a string and returns the extracted parts in a new string.
+
+
+        let str7 = "hello JavaScript6";
+        console.log(str7.substr(0,5)) // The substr() method extract a part of a string and returns the extracted parts in a new string.
+
+      
+        let str8 = "hello JavaScript7";
+        console.log(str8.toUpperCase()) // A string is converted to upper case.
+        
+        let str9 = "HELLO JAVASCRIPT8";
+        console.log(str9.toLowerCase()) // A string is converted to lower case.
+
+        let str10 = "hello";
+        let str11 = "JavaScript9"
+        let srt12 = str10.concat(" ",str11); // The concat() method joins two or more strings.  
+        console.log(srt12); 
+
+
+        let str13 = "    hello JavaScript10    ";
+        console.log(str13.trim()) // The trim() method removes whitespace from both sides of a string.
+
+        
+        let str14 = "hello JavaScript11";
+        console.log(str14.repeat(2)) // repeat() returns a new string with a number of copies of a string.
+
+       
+        let str15 = "hello JavaScript12";
+        console.log(str15.replace("hello","ES6")) // The replace() method replaces a specified value with another value in a string.
+
+
+        let str16 = "hello JavaScript13";
+        let str17 = str16.split(","); // A string can be converted to an array with the split() method.
+        console.log(str17[0]);
+
+
+
+
+    </script>
+
+</body>
+
+</html>
+<!--  -->
