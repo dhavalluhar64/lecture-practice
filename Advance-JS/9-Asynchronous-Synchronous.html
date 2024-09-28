@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronous-and-Asynchronous</title>
+</head>
+
+<body>
+    <script>
+
+        // javaScript is Synchrouns language
+
+
+        // (1) Synchronous 
+
+        //--->  Synchronous mean the code runs in a particular sequence of instractions given in the program.
+        // Each instruction waits for the previous instraction to complete its execution.
+
+
+        console.log("Hi!")
+        console.log("Hello World!")
+        console.log("Welcome to javaScript!")
+
+
+        //(2) Asynchronous
+
+        //---> Due to synchronous programming , sometimes imp instractions get blocked due to some previous instructions,which causes a delay in the UI.
+        // Asynchronous code execution allows to execute next instractions
+        // immediately and doesn't block the flow
+
+
+        console.log("hello js1");
+
+        setTimeout(() => {
+
+            console.log("hello ES6");
+
+        }, 2000);
+
+        console.log("hello js2")
+        console.log("hello js3")
+
+
+        // next Example
+
+        setInterval(() => {
+
+            console.log("javaScript ES6");
+
+        }, 2000);
+
+
+
+    </script>
+</body>
+
+</html>
+
+<!--  -->
