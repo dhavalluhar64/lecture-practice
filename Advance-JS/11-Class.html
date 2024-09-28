@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+
+<body>
+    <script>
+
+        //  (1) class
+
+        //  --> Data member (variable) and member function (function) of class :- blue print of objects
+
+
+        //   syntext
+
+        //   class classname{
+
+        //     member function(){
+
+        //         let variable
+        //     }
+
+        //     member function(){
+
+        //         let variable
+        //     }
+        //   };
+
+        //   const name = new classname
+
+
+
+        class bank {
+
+            account(pin, balance) {
+
+                let bankname = "BOB";
+                let bankIFCE = "BORB0DBBPAL";
+                let Atmpin = pin;
+                let bankbalance = balance;
+
+                // Displaying the bank information
+                console.log(`Bank Name: ${bankname}`);
+                console.log(`Bank IFSC: ${bankIFCE}`);
+                console.log(`ATM PIN: ${Atmpin}`);
+                console.log(`Bank Balance: ₹${bankbalance}`);
+            };
+        };
+
+
+        let getValue = new bank();
+
+        getValue.account(6354, "20,0000");
+
+        console.log(getValue)
+
+
+    </script>
+</body>
+
+</html>
+
+<!--  -->
