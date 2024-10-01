@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Methods</title>
+</head>
+
+<body>
+    <script>
+
+
+        //(1) Static Methods:
+
+        //--> Static methods are often utility functions, such as functions to create or clone objects,
+        //     whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
+
+
+        class dataDetails {
+
+            constructor(course, fees) {
+
+                this.course = course;
+
+                this.fees = fees;
+
+                this.history = [fees];
+            }
+
+            static assessment = "Bootstrap LighBox Gellery"
+
+            personalDetails() {
+
+                return `my course name ${this.course} and course fees ${this.fees}`
+            }
+
+            accountInfromation() {
+
+                return `Total amount paid  is ${this.history}`
+            }
+        }
+
+
+        const accountDetails = new dataDetails("Frontend-Developer", 70000);
+
+        console.log(accountDetails.course);
+
+        console.log(accountDetails.fees);
+
+        console.log(dataDetails.assessment)
+
+        console.log(accountDetails.personalDetails())
+
+        console.log(accountDetails.accountInfromation());
+
+
+    </script>
+</body>
+
+</html>
+
+<!--  -->
