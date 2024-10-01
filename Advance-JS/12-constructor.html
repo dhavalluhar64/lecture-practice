@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+
+<body>
+    <script>
+
+        // (1)Constructor:
+
+        //--> The constructor() method is used to initialize the properties of a class object.
+        //     It is called automatically when an object is created using the new keyword.
+
+
+        class Person {
+
+            constructor(fullName, lastName, age, msg) {
+
+                this.fullName = fullName;
+                this.lastName = lastName;
+                this.age = age;
+                this.msg = msg
+            }
+
+            PersonalDetails() {
+
+                return `${this.msg} My name is ${this.fullName} ${this.lastName} and i am ${this.age} old`
+            }
+        }
+
+        const details = new Person("Dhaval", "Panchal", 21, "Hello");
+
+        console.log(details);
+        console.log(details.PersonalDetails())
+        console.log(details.fullName)
+        console.log(details.lastName)
+        console.log(details.age)
+        console.log(details.msg)
+
+
+
+
+    </script>
+</body>
+
+</html>
+<!--  -->
