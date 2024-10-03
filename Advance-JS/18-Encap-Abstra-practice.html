@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encap-and-Abstra-practice</title>
+</head>
+
+<body>
+    <script>
+
+        // functions base use practice
+
+
+        function UserName(name, age) {
+
+            // privete field mins private data --> Encap
+            let _name = name;
+            let _age = age;
+
+
+            // privete data access--> Abstra
+
+            this.getName = (() => {
+
+                return _name;
+
+            })
+
+            this.getAge = (() => {
+
+                return _age
+            })
+
+
+            // Update name 
+
+            this.setName = ((newName) => {
+
+                if (newName.length > 0) {
+
+                    return _name = newName;
+
+                } else {
+
+                    console.log(`Name must be not Empty`)
+
+                }
+
+            });
+
+
+            this.setAge = ((newAge) => {
+
+                if (newAge > 0) {
+
+                    return _age = newAge;
+
+                } else {
+
+                    console.log(`Undefind Empty`);
+                }
+
+            })
+
+        }
+
+        const personDetails = new UserName("dhaval", 21);
+
+        console.log(personDetails._name) // privete value not access
+
+        console.log(personDetails.getName()) // output: dhaval
+
+        console.log(personDetails.getAge()) // output: 21
+
+
+        // update name 
+
+        personDetails.setName("Hiren"); // name update
+
+        console.log(personDetails.getName()) // outPut: hiren
+
+
+
+        // update age
+
+        personDetails.setAge(22) // age update 
+
+        console.log(personDetails.getAge()); // output: 22
+
+
+    </script>
+</body>
+
+</html>
+
