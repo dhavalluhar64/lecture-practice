@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor-Example</title>
+</head>
+
+<body>
+    <script>
+
+        class person {
+
+            constructor(name, age) {
+
+                this.name = name;
+                this.age = age;
+            }
+
+            personDetails(vote) {
+
+                console.log(`Name: ${this.name} Age: ${this.age} Election-age: ${vote}`);
+
+                if (vote >= 18) {
+
+                    return `voting`
+
+                } else {
+
+                    return `you are not voting`
+                }
+
+            }
+        }
+
+        const ViewDetails = new person("dhaval", 21);
+
+        console.log(ViewDetails)
+
+        console.log(ViewDetails.personDetails(18)) // output: voting
+
+
+
+
+    </script>
+</body>
+
+</html>
+<!--  -->
