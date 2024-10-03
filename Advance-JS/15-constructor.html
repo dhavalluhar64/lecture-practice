@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+
+<body>
+    <script>
+
+        //(1) Constructor : function automatically / same comman value and defult always top
+
+        // class have only one contructor
+
+        class teacher {
+
+            student1() {
+
+                let name = "dhaval";
+                let age = 21;
+                let cousre = "frontend-Developer";
+
+                console.log(name);
+                console.log(age);
+                console.log(cousre);
+            }
+
+            student2(name, age, course) {
+
+                return `name: ${name} age: ${age} course: ${course}`
+            }
+
+            constructor() {
+
+                console.log("constructor call"); // first constructor automatically define 
+            }
+
+            // constructor() {
+
+            //     console.log("data") // not use one class to many constructor only one constuctor use on one class
+            // }
+
+
+        }
+
+        const Details = new teacher();
+
+        console.log(Details);
+
+        Details.student1();
+
+        console.log(Details.student2("Hiren",22,"CyberSecurity"))
+
+
+
+
+    </script>
+</body>
+
+</html>
+
+<!--  -->
