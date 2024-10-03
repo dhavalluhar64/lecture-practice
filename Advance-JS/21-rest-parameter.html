@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+
+<body>
+    <script>
+
+
+        //(1) Rest Parameter
+
+        //--> The rest parameter allows you to represent an indefinite number of arguments as an array. 
+
+
+        // syntex: (...parameter)
+
+
+        function sumfoArray(...isArray) {
+
+            let TotalSum = 0;
+
+            for (let i = 0; i < isArray.length; i++) {
+
+                TotalSum = TotalSum + isArray[i];
+            }
+
+            return TotalSum;
+
+
+        }
+
+        console.log(sumfoArray(1, 2, 3, 4, 5));
+
+
+        ////////////////////////////////////////
+
+        function personalDetails(firstName, lastName, ...hobbies) {
+
+            console.log(`my name is ${firstName} ${lastName}`);
+
+            console.log(`my Hobbies are: ${hobbies.join(",")}`);
+        }
+
+        personalDetails("dhaval", "Luhar", "Reading", "Traveling", "History")
+
+    </script>
+</body>
+
+</html>
