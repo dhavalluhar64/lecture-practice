@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymerphism</title>
+</head>
+
+<body>
+    <script>
+
+        //(1) Method Overloading (compile time)
+
+        //--> class one function name same but defferent parameter
+
+
+        //(2) Method Overriding(runtime)
+
+        //--> function name same and parameter same but defferent class name ;
+
+
+        //(1)Example: Method Overloading
+
+
+        class UserDetails {
+
+            person(name, age) {
+
+                return `my name is ${name} and i am years ${age} old`;
+
+            }
+
+            person(name, age, Education) {
+
+                return `my name is ${name} and i am years ${age} old course: ${Education}`;
+            }
+        }
+
+        //Note: Method Overloading function name same but loading not possible in javaScript
+
+        const DetailsOfperson = new UserDetails();
+
+        console.log(DetailsOfperson);
+
+        console.log(DetailsOfperson.person("dhaval", 21, "Frontend-Developer"));
+
+
+        //(2)Example: Methods Overriding
+
+
+        class principle {
+
+            studentDetails(studentName, std, marks) {
+
+                return `1 Student Name: ${studentName} study: ${std} result: ${marks}`
+
+            }
+
+        }
+
+        class teacher extends principle {
+
+            studentDetails(studentName, std, marks) {
+
+                return `2 Student Name: ${studentName} study: ${std} result: ${marks}`
+
+            }
+
+        }
+
+        class Student extends teacher {
+
+            studentDetails(studentName, std, marks) {
+
+                return `3 Student Name: ${studentName} study: ${std} result: ${marks}`
+
+            }
+
+        }
+
+        const StudentView = [new principle(), new teacher(), new Student()];
+
+        StudentView.forEach((StudentID) => {
+
+            console.log(StudentID.studentDetails("dhaval", 21, "BCA"));
+        })
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+
