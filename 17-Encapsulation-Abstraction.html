@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // (1) abstraction is hiding the complexcity privete data
+
+        class dataHiding {
+
+            constructor(name, age) {  // private feild
+
+                this._name = name
+                this._age = age
+            }
+
+
+            get nameAccess() { // Encapsulation // private data acssess
+
+                return this._name
+            }
+
+            set nameAccess(NewName) {
+
+                if (NewName.length > 0) {
+
+                    this._name = NewName;
+
+                } else {
+
+                    console.log(`Name must be not Empty`)
+
+                }
+
+            }
+
+            // age value get and set
+
+            get ageAccess() {
+
+                return this._age;
+            }
+
+            set ageAccess(NewAge) {
+
+                if (NewAge > 0) {
+
+                    return this._age = NewAge;
+
+                } else {
+
+                    console.log(`Undefind Epmty`);
+                }
+            }
+        }
+
+        const Username = new dataHiding("Dhaval", 21)
+
+        console.log(Username._name); // direct name access
+
+        console.log(Username.nameAccess) // get value 
+
+        Username.nameAccess = "Hiren"; // set value
+
+        console.log(Username.nameAccess) // update name output: hiren
+
+
+
+        // age value access
+
+        console.log(Username._age) // direct age access 
+
+        console.log(Username.ageAccess) // get value
+
+        Username.ageAccess = 23;      // set value
+
+        console.log(Username.ageAccess) // update age output: 23
+
+
+    </script>
+
+
+</body>
+
+</html>
+<!--  -->
