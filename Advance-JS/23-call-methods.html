@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // (1) call methods
+
+        //---> current Execution contains another function to pass;
+
+
+        const Username = {
+
+            name: "dhaval",
+            lastName: "Luhar",
+            age: 21,
+            details() {
+
+                console.log(`my name is ${this.name} and i am ${this.age} yaers old`)
+            }
+        }
+
+        function viewData(faculty) {
+
+            console.log(`my faculty name ${faculty}`)
+
+        }
+
+        viewData.call(Username.details(), "shubham");
+
+
+
+        ////////////////////////////////////////////////
+
+
+        // Example:- one function to another argument pass
+
+        function datalist(name, course) {
+
+            this.name = name;
+
+            this.course = course;
+
+            console.log("called")
+        }
+
+        function view(name, course, grade) {
+
+            datalist.call(this, name, course);
+
+            this.grade = grade;
+
+        }
+
+        const obj = new view("dhaval", "frontend-Developer", "B+");
+
+        console.log(obj);
+
+
+
+        ////////////////////////////////////////////////////
+
+        // Example:- Practice Question
+
+        const car1 = {
+
+            make: "Toyota",
+            model: "Fortuner",
+            year: 2020,
+            // details() {
+
+            //     console.log(`Making ${this.make} Model ${this.model} Years ${this.year}`)
+            // }
+        }
+
+        function details(location) {
+
+            console.log(`Making ${this.make} Model ${this.model} Years ${this.year} ${location}`)
+        }
+
+        const car2 = {
+
+            make: "TATA",
+            model: "HARRIER",
+            year: 2020,
+
+        }
+
+        // car1.details.call(car2);
+
+        details.call(car2, "India");
+
+
+
+    </script>
+
+</body>
+
+</html>
