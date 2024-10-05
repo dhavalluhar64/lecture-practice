@@ -1,16 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bind Methods</title>
+    <title>Apply Methods</title>
 </head>
+
 <body>
     <script>
 
-     // (1) Apply Methods
+        // (1) Apply Methods :- The apply() method is similar to call(), but instead of passing arguments individually, you pass them as an array.
+
+
+
+        const student = {
+
+            name: "Dhaval",
+
+            itroduce(age, course) {
+
+                console.log(`my name is ${this.name}.  i am ${age} years old i study ${course}`)
+            }
+        }
+
+        const otherStudent = {
+
+            name: "Tushar Dharaiya",
+        }
+
+        student.itroduce.apply(otherStudent, ["26", "Softwere Tester"]);
+
+
+
+        //////////////////////////////////////////////////////////
+
+        //Example:- Practice Question
+
+        const number = [8, 3, 12, 7, 5, 1, 20, 9];
+
+        const maxNumber = Math.max.apply(null, number);
+
+        const minimumNumber = Math.min.apply(null, number);
+
+        console.log(maxNumber);
+
+        console.log(minimumNumber);
+
+
+
+
+
+        ///////////////////////////////////////////////////
+
+
+        const rectengle = {
+
+            area(length, width) {
+
+                return length * width
+
+            }
+        }
+
+        const AreaOfsquare = rectengle.area.apply(null, [5, 5]);
+
+        console.log(AreaOfsquare);
+
+
+
+        //////////////////////////////////////////////
+
+        // Example:- Practice Question;
+
+
+        let arra = [1, 2, 3];
+
+        let arra1 = [4, 5, 6];
+
+        Array.prototype.push.apply(arra, arra1);
+
+        console.log(arra);
+
+
+
+        //////////////////////////////////////////////////////
+
+        // Example:- Practice Question
+
+
+        const fruits = {
+
+
+            0: "apple",
+            1: "Banana",
+            2: "Mango",
+            length: 3
+        };
+
+        Array.prototype.push.apply(fruits, ["Orange"]);
+
+        console.log(fruits);
+
+
+
+
+
+
+
 
 
     </script>
 </body>
+
 </html>
+<!--  -->
