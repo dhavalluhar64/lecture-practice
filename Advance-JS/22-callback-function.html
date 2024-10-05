@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Function</title>
+</head>
+
+<body>
+    <script>
+
+        // (1) Callback
+
+        //---> A callback is a function passed as argument to another function.
+
+
+        function sum(num, num1) {
+
+            return num + num1;
+
+        }
+
+        function addNumber(num, num1, num2, val) {
+
+            let sumoftotal = val(num, num1);
+
+            return val(sumoftotal, num2);
+
+
+        }
+
+
+        console.log(addNumber(10, 10, 10, sum));
+
+
+
+
+        //////////////////////////////////////////////
+
+        // Example:- parctice Question
+
+        function addNumbers(num1, num2, callback) {
+            let sum = num1 + num2;
+            // Call the callback and pass the sum
+            callback(sum);
+        }
+
+        // Callback function to display the result
+        function displayResult(result) {
+            console.log("The sum is: " + result);
+        }
+
+        // Test the function
+        addNumbers(5, 10, displayResult);
+
+
+
+
+
+        ////////////////////////////////////////////
+
+        // Example:- Delayed Message with setTimeout
+
+
+        function dealyMsg() {
+
+            console.log(`this is output`)
+        }
+
+        function output(callback) {
+
+            setTimeout(callback, 1000);
+
+        }
+
+        output(dealyMsg);
+
+
+
+
+        ///////////////////////////////////////////
+
+        // Example: Filtering an Array using a Callback
+
+        function filterNumber(numberArray, callback) {
+
+            return numberArray.filter(callback);
+        }
+
+
+        function isEven(number) {
+
+            return number % 2 === 0;
+        }
+
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        const evenNumber = filterNumber(numbers, isEven);
+
+        console.log(evenNumber);
+
+
+
+
+
+        ///////////////////////////////////////////////////////////
+
+        // Example:- Custom map Function
+
+        function customMap(arr, callbackk) {
+
+            const resultt = [];
+
+            for (let i = 0; i < arr.length; i++) {
+
+                resultt.push(callbackk(arr[i]));
+            }
+
+            return resultt;
+        }
+
+        function double(numm) {
+
+            return numm * 2;
+        }
+
+        const orignal = [1, 2, 3, 4, 5, 6, 7];
+
+        const mapArray = customMap(orignal, double);
+
+        console.log(mapArray);
+
+
+
+
+
+        //////////////////////////////////////////////
+
+        // Example:- array iteration using forEach
+
+
+        function Username(nameArray, callback) {
+
+            return nameArray.forEach(callback)
+        }
+
+        function nameAccess(name) {
+
+            console.log(`Proccesing name: ${name}`)
+        }
+
+        const NameDetails = ["Dhaval", "Hiren", "Jaimin", "tushar"];
+
+        let access = Username(NameDetails, nameAccess);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+<!--  -->
