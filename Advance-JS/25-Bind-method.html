@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind Methods</title>
+</head>
+
+<body>
+    <script>
+        // (1) Bind Method
+
+        //---> The bind() method of Function instances creates a new function that, when called,
+
+
+
+        const Student = {
+
+            firstName: "Dhaval",
+            grade: 5,
+            // details() {
+
+            //     console.log(`${this.firstName} studies in grade ${this.grade}`)
+            // }
+        }
+
+        function details() {
+
+            console.log(` ${this.firstName} Studies in grade ${this.grade}.`)
+        }
+
+
+        const student2 = {
+
+            firstName: "Hiren",
+            grade: 6,
+
+        }
+
+        // let data = Student.details.bind(student2);
+
+        //console.log(data());
+
+        let data = details.bind(student2);
+
+        data()
+
+
+
+        /////////////////////////////////////////////////////////////
+
+        // Example 2: Using bind() Method with two Parameters
+
+
+        const student3 = {
+
+            name: "Dhaval",
+            introduction(score) {
+
+                console.log(`${this.name} Scored ${score} in an Exam`);
+            }
+        }
+
+        const student4 = {
+
+            name: "Hiren",
+        }
+
+        const obj = student3.introduction.bind(student4, 95);
+
+        obj()
+
+
+        /////////////////////////////////////////////////////
+
+
+        const sum = function (x, y) {
+
+            return x + y;
+        };
+
+        const addFive = sum.bind(null, 5);
+
+        console.log(addFive(6))
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
