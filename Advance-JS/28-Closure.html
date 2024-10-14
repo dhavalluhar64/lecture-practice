@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure in JS</title>
+</head>
+
+<body>
+    <script>
+
+        // (1) Closure
+
+        //--->  a function that has access to its parent function's scope, even after the parent function has finished executing.
+
+
+        function addNumber() {
+
+            let counter = 0; // Variable in outer function
+
+            return function () { //  // Inner function (closure)
+
+                counter++; // Accesses outer function's variable
+                return counter;
+            }
+        }
+
+
+        const updateNumber = addNumber();
+
+        console.log(updateNumber()) // output 1 
+        console.log(updateNumber()) // output 2 
+        console.log(updateNumber()) // output 3 
+
+
+
+        /////////////////////////////////////////////////////////////
+
+
+        // (1)Example: Simple Greeting Closure
+
+
+        function greetUser(name) {
+
+            return function () {
+
+                console.log(`Hello ${name}`)
+            }
+        }
+
+
+        const greetDhaval = greetUser("Dhaval");
+
+        greetDhaval();
+
+        // change value
+
+        const changeName = greetUser("Hiren");
+
+        changeName();
+
+
+
+
+        /////////////////////////////////////////////////////////////
+
+
+        // (2)Example: Increment and Decrement Counter
+
+
+        function createCounter() {
+
+            let count = 0; // Variable in outer function
+
+            return {
+
+                increment() {
+
+                    count++;
+                    return count;
+                },
+
+                Decrement() {
+
+                    count--;
+                    return count
+
+                }
+            }
+        }
+
+
+        const coutValue = createCounter();
+
+        console.log(coutValue.increment()); // output 1
+
+        console.log(coutValue.Decrement()) // output 0
+
+
+
+        /////////////////////////////////////////////////////////////
+
+
+        // (3)Example: Sum with Closure
+
+
+        function sum(x) {
+
+            return function (y) {
+
+                return x + y;
+
+            }
+        }
+
+        const addisation = sum(5);//  this value is x
+
+        console.log(addisation(3)) // this value is y output : 8
+
+
+
+    </script>
+</body>
+
+</html>
+<!--  -->
