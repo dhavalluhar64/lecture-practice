@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+
+<body>
+    <!-- JSON :- javaScript syntex object Notations (read data) 
+
+         no SQL rest API -->
+
+    <!-- light base easy use and esay read -->
+
+    <!-- key and value pair -->
+
+    <!-- javaScript json (direct) :- methods parse() Stringify() -->
+
+    <!-- json syntex
+
+    let person = `[
+
+       {
+
+       "name": "dhaval",
+       "age": 21,
+       "course": "frontend"
+       }
+    ]` -->
+
+
+    <script>
+
+
+        let person = `[
+
+            {
+
+                "id": 1,
+                "name": "Dhaval",
+                "age": 21,
+                "course": "Frontend-Development"
+
+            },
+            {
+
+                "id": 2,
+                "name": "Hiren",
+                "age": 22,
+                "course": "FulllStack Java"
+
+            },
+            {
+                "id": 3,
+                "name": "Jaimin",
+                "age": 20,
+                "course": "CyberSecurity"
+            }
+
+        ]`
+
+
+
+        // console.log(person) 
+
+        // JSON.parse():- JSON data and convert objets/array
+
+        // JSON data objects
+        let objects1 = JSON.parse(person);
+
+
+        // array above loops
+        objects1.forEach((val) => {
+
+            document.write(`<h2> ID:${val.id} Name: ${val.name} Age: ${val.age} course: ${val.course}</h2>`)
+
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>
+<!--  -->
