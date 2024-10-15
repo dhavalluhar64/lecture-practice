@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- promises are three state .
+
+        (1) Pending
+        (2)Fulfilled(resolve)
+        (3)Rejected -->
+
+    <!-- syntax: let person = new Promise ((resolve,reject) => {
+                 
+        }) -->
+
+    <script>
+
+        //(1) Example
+
+        function data(output) {
+
+            console.log(output);
+        }
+
+        let dataBase = new Promise((resolve, reject) => {
+
+            let x = 0
+
+            if (x === 1) {
+
+                console.log("resolve data");
+                resolve("data Success");
+
+            } else {
+
+                reject("error");
+            }
+        });
+
+        // console.log(dataBase)
+
+        dataBase.then((res) => {
+
+            data(res);
+
+        }, (err) => {
+
+            data(err)
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>
+<!--  -->
