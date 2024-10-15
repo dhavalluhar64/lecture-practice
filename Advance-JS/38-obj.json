@@ -1,0 +1,36 @@
+{
+    "product": [
+        {
+            "id": 1,
+            "img": "https://m.media-amazon.com/images/I/71PWtp6qDbL._SL1500_.jpg",
+            "tittle": "parker jotter Stander CT Ball pen Black",
+            "price": 10,
+            "dealoftheday": true,
+            "rating": 5,
+            "offer": 10
+        }
+    ],
+    "user": [
+        {
+            "id": 2,
+            "name": "dhaval",
+            "age": 21,
+            "email": "user@112.gmail.com",
+            "mobile": 2583691472
+        },
+        {
+            "id": 3,
+            "name": "Hiren",
+            "age": 22,
+            "email": "user@113.gmail.com",
+            "mobile": 2583691475
+        },
+        {
+            "id": 4,
+            "name": "jaimin",
+            "age": 23,
+            "email": "user@114.gmail.com",
+            "mobile": 2583691477
+        }
+    ]
+}
