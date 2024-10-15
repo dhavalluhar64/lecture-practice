@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetchdata</title>
+</head>
+
+<body>
+
+    <!-- Fetch() :- promise -->
+
+    <!-- API :- Application Programing interface (restAPI json) , GraphQL,.. -->
+
+    <script>
+
+
+        fetch('33-test.txt', {
+
+            // deafult methods GET
+
+            method: "GET"
+        })
+
+            // text file js
+
+            .then((result) => {
+
+                // convert to js but text file orignal file .json
+
+                return result.text();
+            })
+
+            // callback
+
+            .then((result) => {
+
+                // console.log(result)
+                document.write(result);
+            })
+
+
+    </script>
+
+
+
+</body>
+
+</html>
+<!--  -->
