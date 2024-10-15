@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destracturing</title>
+</head>
+
+<body>
+    <script>
+
+        //(1) Destracturing in JS
+
+        //  (1) Array Destracturing
+
+        // Before ES6
+        const arr = ["dhaval", "hiren", "jaimin", "sanket"];
+
+        console.log(arr[0])
+
+        console.log(arr[1])
+
+
+        // Form ES6
+
+        const [one, two, three] = arr;
+
+        console.log(one) // output: dhaval
+
+
+
+        //(2) Object Destracturing
+
+        // Before ES6
+
+        const obj = {
+
+            name: "Dhaval",
+            age: 21,
+            course: "Frontend-Development"
+        };
+
+        console.log(obj.age);
+
+        console.log(obj.course);
+
+        // Form ES6
+
+        const { name, age, course } = obj
+
+        console.log(age) // output: 21
+
+
+    </script>
+</body>
+
+</html>
