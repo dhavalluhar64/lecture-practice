@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetching-data</title>
+</head>
+
+<style>
+    #one {
+
+        display: block;
+    }
+</style>
+
+<body>
+    <button id="one">User data</button>
+    <script>
+        let getValue = document.querySelector("#one");
+
+        getValue.style.display = "block";
+
+        let storeValue = document.querySelector("#store");
+
+        getValue.addEventListener("click", function () {
+            fetch("36-data.json", {
+                method: "GET",
+            })
+                .then((result) => {
+                    return result.json();
+                })
+
+                .then((data) => {
+                    data.forEach((value1) => {
+
+                        document.write(`<h2>ID:${value1.id} Name: ${value1.name} Age: ${value1.age} Course ${value1.course}</h2>`)
+
+                    });
+                });
+        });
+    </script>
+</body>
+
+</html>
+<!--  -->

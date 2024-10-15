@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "dhaval",
+    "age": 21,
+    "course": "Frontend-Developer"
+  },
+  {
+    "id": 2,
+    "name": "Hiren",
+    "age": 22,
+    "course": "Fullstack java"
+  },
+  {
+    "id": 3,
+    "name": "jaimin",
+    "age": 23,
+    "course": "CyberSecurity"
+  },
+  {
+    "id": 4,
+    "name": "Sanket",
+    "age": 20,
+    "course": "Graphics Designer"
+  }
+]
