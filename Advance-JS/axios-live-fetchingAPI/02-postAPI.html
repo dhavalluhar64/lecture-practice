@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST METHODS</title>
+
+    <!-- axios link  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
+    <!-- axios link -->
+
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+
+    <!-- bootstrap css link -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- bootstrap js link -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h1 class="text-center mt-5">POST</h1>
+
+
+    <div class="container d-flex justify-content-center mt-5">
+        <form class="col-md-4">
+            <div class="mb-3">
+                <label for="nameinput" class="form-label">name</label>
+                <input type="text" class="form-control" id="nameinput">
+            </div>
+            <div class="mb-3">
+                <label for="avatarinput" class="form-label">avatar</label>
+                <input type="url" class="form-control" id="avatarinput">
+            </div>
+            <div class="mb-3">
+                <label for="emailinput" class="form-label">email</label>
+                <input type="email" class="form-control" id="emailinput" aria-describedby="emailHelp">
+            </div>
+            <button type="submit" class="btn btn-success">Create</button>
+        </form>
+    </div>
+
+
+
+    <script>
+
+
+        let datainsert = document.querySelector('form');
+
+        const fethingdata = async (newOBJ) => {
+
+            const response = await axios.post(`https://6717453bb910c6a6e0273c22.mockapi.io/user/john`, newOBJ);
+
+            if (response.status != 201) {
+
+                throw new Error(`Some Error Status code: ${response.status}`)
+            }
+            const result = await response.data
+
+            return result
+
+        }
+
+        datainsert.addEventListener('submit', async (event) => {
+
+            event.preventDefault();
+
+            let obj = {
+
+                name: document.querySelector('#nameinput').value,
+
+                avatar: document.querySelector('#avatarinput').value,
+
+                email: document.querySelector('#emailinput').value
+            }
+
+            const res = await fethingdata(obj)
+
+            if (res) {
+
+                alert(`Create data successfull`)
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
