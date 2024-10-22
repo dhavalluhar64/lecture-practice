@@ -43,7 +43,7 @@
         //--> Axios is a promise-based HTTP client for making requests to external servers.
 
 
-        let datainsert = document.querySelector('#preViewData');
+         let datainsert = document.querySelector('#preViewData');
 
         const FetchingData = async () => {
 
@@ -58,7 +58,7 @@
                                <div class="col-md-3">
                                 <div class="card m-3" style="width: 18rem;">
                                   <img src="${result.avatar}" class="card-img-top" alt="Product Name"
-                                    style="width: 285px; height: 250px;">
+                                        style="width: 285px; height: 250px;">
                                     <div class="card-body">
                                        <h4 class="card-title">${result.id}</h4>
                                         <h5 class="card-title">${result.name}</h5>
@@ -68,7 +68,7 @@
                                     </div>
                                 </div>`;
 
-                datainsert.innerHTML += createData;
+                                    datainsert.innerHTML += createData;
 
             })
 
@@ -78,10 +78,13 @@
 
         FetchingData()
 
+
+
+
+
     </script>
 
 </body>
 
 </html>
-
 <!--  -->
