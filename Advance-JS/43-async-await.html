@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async await</title>
+</head>
+
+<body>
+    <script>
+
+        // (1)async await
+
+        //--> async and await are used to handle asynchronous operations more easily and make the code look more like synchronous code.
+
+        function Timeout() {
+
+            return new Promise((resolve, reject) => {
+
+                setTimeout(() => {
+
+                    console.log('loading complated')
+
+                    resolve()
+
+                }, 2000)
+
+
+            })
+
+        }
+
+        async function Asyncro() {
+
+            console.log('methods loading.....')
+
+            await Timeout();
+
+            console.log('seconds methods loading...')
+
+        }
+
+        Asyncro()
+
+
+        ///////////////////////////////////////////////
+
+        // (1) Basic Example with fetch API
+
+        const FethingData = async () => {
+
+            const data = await fetch('https://jsonplaceholder.typicode.com/posts')
+
+            let read = await data.json()
+
+            console.log(read)
+        }
+
+        FethingData()
+
+
+        /////////////////////////////////////////////////
+
+        // (2) Handling Errors with try-catch
+
+        const hendling = async () => {
+
+            try {
+
+                const dataRead = await fetch('https://jsonplaceholder.typicode.com/posts');
+
+                if (dataRead.status != 200) {
+
+                    throw new Error(`Some Error Status code: ${dataRead.status}`)
+                }
+
+                const dataResult = await dataRead.json()
+
+                console.log(dataResult)
+
+            } catch (error) {
+
+                console.log(error)
+
+            }
+        }
+
+        hendling()
+
+
+        /////////////////////////////////////////////////////
+
+        //(3) Async Function Returning value
+
+        const returning = async () => {
+
+            return 'hello js return the value';
+        }
+
+        returning()
+            .then(() => {
+
+                console.log(returning())
+            })
+
+
+        // (4) Using promise.all with async-await
+
+
+        const CalledData = async () => {
+            let urls = [
+                'https://jsonplaceholder.typicode.com/posts/1',
+                'https://jsonplaceholder.typicode.com/users/1'
+            ];
+
+
+            const [post, user] = await Promise.all(
+                urls.map((url) => fetch(url).then((res) => res.json()))
+            );
+
+            console.log(`Post:`, post);
+            console.log(`User:`, user);
+
+
+        }
+
+        CalledData();
+
+
+
+    </script>
+</body>
+
+</html>
+<!--  -->
