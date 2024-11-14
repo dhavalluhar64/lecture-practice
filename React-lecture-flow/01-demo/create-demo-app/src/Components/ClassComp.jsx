@@ -1,3 +1,6 @@
+
+// class componets:- class is whene ever user it call render(return)
+
 import { Component } from "react";
 
 class ClassComp extends Component {
@@ -29,7 +32,7 @@ export default ClassComp;
 
 
 
-//rce shortcut key : react class component
+//rce shortcut key : react class export
 
 
 // import React, { Component } from 'react'
