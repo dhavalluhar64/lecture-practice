@@ -5,7 +5,7 @@ import Fragmentt from './Component/Fragmentt';
 import InlineStyle from './Style-CSS/InlineStyle';
 import Internal from './Style-CSS/Internal';
 import External from './Style-CSS/External';
-import ClassComp from './Component/ClassComp';
+import classNameComp from './Component/classNameComp';
 import FunctionComp from './Component/FunctionComp';
 
 
@@ -15,9 +15,9 @@ function App() {
     <>
       <h1>React js course</h1>
 
-      {/* class Components */}
+      {/* className Components */}
 
-      <ClassComp />
+      <classNameComp />
 
       {/* Function Components */}
 

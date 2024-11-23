@@ -15,7 +15,7 @@ const Internal = () => {
   };
 
   return (
-    <div className="main" style={styless}>
+    <div classNameName="main" style={styless}>
       <p style={Paragraph}>This is the Internal css</p>
     </div>
   );

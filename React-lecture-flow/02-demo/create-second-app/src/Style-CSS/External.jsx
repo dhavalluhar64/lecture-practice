@@ -1,12 +1,12 @@
 // (1) CSS Module
 
-//--> Localized class names to avoid global conflicts.
+//--> Localized className names to avoid global conflicts.
 
 //--> Styles are scoped to individual components
 
 //---> Helps in creating components-specifics styles.
 
-//--> Automatically generates unique class names.
+//--> Automatically generates unique className names.
 
 //--> Promotes moduler and maintainable CSS.
 
@@ -18,7 +18,7 @@ import styles from "./External.module.css";
 const External = () => {
   return (
     <>
-      <p className={styles["paragraphp"]}>This is the External css</p>
+      <p classNameName={styles["paragraphp"]}>This is the External css</p>
     </>
   );
 };

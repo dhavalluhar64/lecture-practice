@@ -1,26 +1,26 @@
 
-// class componets:- class is whene ever user it call render(return)
+// className componets:- className is whene ever user it call render(return)
 
 import { Component } from "react";
 
-class ClassComp extends Component {
+className classNameComp extends Component {
   render() {
     return (
       <div>
-        <p>This is the Class Components</p>
+        <p>This is the className Components</p>
       </div>
     );
   }
 }
 
-export default ClassComp;
+export default classNameComp;
 
 
-// rcc Short cut key : React class Component
+// rcc Short cut key : React className Component
 
 // import React, { Component } from 'react'
 
-// export default class ClassComp extends Component {
+// export default className classNameComp extends Component {
 //   render() {
 //     return (
 //       <div>
@@ -32,12 +32,12 @@ export default ClassComp;
 
 
 
-//rce shortcut key : react class export
+//rce shortcut key : react className export
 
 
 // import React, { Component } from 'react'
 
-// export class ClassComp extends Component {
+// export className classNameComp extends Component {
 //   render() {
 //     return (
 //       <div>
@@ -47,5 +47,5 @@ export default ClassComp;
 //   }
 // }
 
-// export default ClassComp
+// export default classNameComp
 
