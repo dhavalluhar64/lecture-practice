@@ -66,7 +66,11 @@ const FunctionProps = () => {
 
   return (
     <>
-      <FunctionChild ChildAcsess={Imgcard} />
+      <div className="container">
+        <div className="row">
+          <FunctionChild ChildAcsess={Imgcard} />
+        </div>
+      </div>
     </>
   );
 };

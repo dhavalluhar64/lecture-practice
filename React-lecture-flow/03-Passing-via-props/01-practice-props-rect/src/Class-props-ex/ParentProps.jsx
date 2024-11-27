@@ -2,8 +2,8 @@ import { Component } from "react";
 
 import ChildProps from "./ChildProps";
 
-className ParentProps extends Component {
-  render() {
+class ParentProps extends Component {
+  render()  {
     const Student = [
       { firstName: "Dhaval", lastName: "Panchal", course: "Front-End" },
       { firstName: "Hiren", lastName: "Panchal", course: "Cyber-Security" },

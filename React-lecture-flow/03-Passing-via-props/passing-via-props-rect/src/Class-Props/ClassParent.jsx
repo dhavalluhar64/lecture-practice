@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import classNameChild from "./classNameChild";
+import ClassChild from "./ClassChild";
 
-className classNameParent extends Component {
+class ClassParent extends Component {
   render() {
     return (
       <>
-        <classNameChild
+        <ClassChild
           name="dhaval"
           course="Fron-tend"
           lastname="Panchal"
@@ -19,4 +19,4 @@ className classNameParent extends Component {
   }
 }
 
-export default classNameParent;
+export default ClassParent;

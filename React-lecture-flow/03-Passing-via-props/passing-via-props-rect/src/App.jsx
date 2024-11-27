@@ -1,12 +1,12 @@
 import "./App.css";
 
-import classNameParent from "./className-Props/classNameParent";
+import ClassParent from "./Class-Props/ClassParent";
 
 function App() {
   return (
     <>
       <h1>Hello this is react props</h1>
-      <classNameParent />
+      <ClassParent />
     </>
   );
 }

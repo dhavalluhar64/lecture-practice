@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-className classNameChild extends Component {
+class ClassChild extends Component {
   constructor(props) {
     super(props);
     this.data = props;
@@ -9,7 +9,7 @@ className classNameChild extends Component {
   render() {
     return (
       <>
-        <table classNameName="table table-bordered">
+        <table className="table table-bordered">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -45,4 +45,4 @@ className classNameChild extends Component {
   }
 }
 
-export default classNameProps;
+export default ClassChild;
