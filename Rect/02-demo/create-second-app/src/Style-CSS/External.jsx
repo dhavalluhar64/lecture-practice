@@ -18,7 +18,7 @@ import styles from "./External.module.css";
 const External = () => {
   return (
     <>
-      <p classNameName={styles["paragraphp"]}>This is the External css</p>
+      <p className={styles["paragraphp"]}>This is the External css</p>
     </>
   );
 };
