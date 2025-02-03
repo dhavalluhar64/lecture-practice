@@ -3,7 +3,7 @@
 
 import { Component } from "react";
 
-className classNameComp extends Component {
+class classComp extends Component {
   render() {
     return (
       <div>
@@ -13,7 +13,7 @@ className classNameComp extends Component {
   }
 }
 
-export default classNameComp;
+export default classComp;
 
 
 // rcc Short cut key : React className Component
