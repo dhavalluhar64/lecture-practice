@@ -1,5 +1,21 @@
 import React, { useReducer, useState } from "react";
 
+// state:- Current state value return karenga
+
+// dispatch:- state ko update karneke liye function hai
+
+// ReducerFunction:- yeh ek pure function hota hai jo state ko update karne ka logic define karta hai
+
+// INITIAL_STATE:- state ki initial value
+
+// Key Point to Remember
+
+// 1. Complex State Handling :- multiple states ko manage karna ho
+
+// 2. Pure Function Requirement :- side-effects allowed nahi hote.
+
+// 3. Predictable State Management:- All state transitions ek hi jagah handle karte hain
+
 const INITIAL_STATE = {
   Name: "",
   email: "",
